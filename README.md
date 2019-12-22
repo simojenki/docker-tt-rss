@@ -1,4 +1,6 @@
 *** IMPORTANT NOTICE ***  
+THIS IMAGE IS A FORK OF THE DEPRECATED linuxserver.io IMAGE
+
 THIS IMAGE HAS BEEN DEPRECATED  
 We are no longer able to ingest tarballs from upstream repo  
 
