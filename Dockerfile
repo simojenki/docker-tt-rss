@@ -4,8 +4,8 @@ FROM lsiobase/nginx:3.10
 ARG BUILD_DATE
 ARG VERSION
 ARG TT_RSS_VERSION
-LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DATE}"
-LABEL maintainer="sparklyballs"
+LABEL build_version="simojenki fork of -> Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DATE}"
+LABEL maintainer="simojenki"
 
 RUN \
  echo "**** install packages ****" && \
@@ -14,6 +14,7 @@ RUN \
 	git \
 	grep \
 	php7-apcu \
+	php7-ctype \
 	php7-curl \
 	php7-dom \
 	php7-gd \
