@@ -29,14 +29,16 @@ RUN \
         php7-pdo_pgsql \
         php7-pgsql \
         php7-posix \
-        tar
-
-RUN \
+        tar && \
     echo "**** install software ****" && \
     mkdir -p /var/www/html && \
-    git clone https://git.tt-rss.org/fox/tt-rss.git /var/www/html
-
-RUN \
+    git clone https://git.tt-rss.org/fox/tt-rss.git /var/www/html && \
+    echo "**** installing fever api plugin ****" && \
+    cd /tmp && \
+    git clone https://github.com/dasmurphy/tinytinyrss-fever-plugin.git && \
+    cd /tmp/tinytinyrss-fever-plugin && \
+    git checkout tags/1.4.7 && \
+    mv fever /var/www/html/plugins && \
     echo "**** link php7 to php ****" && \
     ln -sf /usr/bin/php7 /usr/bin/php && \
     echo "**** cleanup ****" && \
